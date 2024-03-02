@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_02_182419) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_02_190333) do
   create_table "destinations", force: :cascade do |t|
     t.integer "trip_id"
     t.integer "type"
@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_182419) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["trip_id"], name: "index_destinations_on_trip_id"
   end
 

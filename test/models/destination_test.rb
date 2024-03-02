@@ -4,6 +4,8 @@
 #
 #  id          :integer          not null, primary key
 #  description :text
+#  latitude    :float
+#  longitude   :float
 #  name        :string
 #  type        :integer
 #  created_at  :datetime         not null
