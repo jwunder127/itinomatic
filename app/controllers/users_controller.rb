@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def show
+  def index
     @user = User.find_by(id: params[:id])
     if @user
       render json: @user
     else
       render json: {error: "Error finding user"}, status: 404
     end
+  end
+
+  def show
+    @user = User.find_by(id: params[:id])
   end
 
   def create

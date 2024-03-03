@@ -1,0 +1,8 @@
+<div>
+  <div>
+    Welcome, <%= @user.first_name %>
+  </div>
+  <div>
+    You've created your account. Now, it's time for you to <%= link_to 'create a trip', new_user_trip_path(@user.id) %>
+  </div>
+</div>
